@@ -1,9 +1,11 @@
-function sum(arr) {
+function sumOfArray(arr) {
     var sum = 0;
     arr.forEach((element) => (sum += element));
     return sum;
 }
-console.log(sum([1, 2, 3, 4, 5, 6]));
+console.log(sumOfArray([1, 2, 3, 4, 5, 6]));
+console.log(sumOfArray([12, 32, 32, 43, 65, 16]));
+console.log(sumOfArray([21, 72, 33, 44, -45, 56]));
 
 function findMaxValue(numbers) {
     // Your code here
