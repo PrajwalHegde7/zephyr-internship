@@ -70,8 +70,16 @@
                 <a class="navbar-menu-item" href="#">Home</a>
                 <a class="navbar-menu-item">Products</a>
                 <a class="navbar-menu-item">Careers</a>
-                <a class="navbar-menu-item">About</a>
+                <a class="navbar-menu-item" onclick="buttonClick(event)">About</a>
             </div>
         </div>
+
+        <script>
+            // document.getElementsByClassName("navbar-menu")[0].addEventListener("click",buttonClick)
+            function buttonClick(event) {
+                console.log(event)
+                // event.preventDefault();
+            }
+        </script>
     </body>
 </html>

@@ -28,3 +28,7 @@ function countEvenNumbers(numbers) {
 console.log(countEvenNumbers([1, 2, 3, 4, 5, 6])); // Output: 3
 console.log(countEvenNumbers([10, 21, 32, 45])); // Output: 2
 console.log(countEvenNumbers([7, 9, 11, 13])); // Output: 0
+
+import download from "./download.js";
+
+download.display("pjl");
