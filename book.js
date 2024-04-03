@@ -1,34 +1,37 @@
 // Define the Book object
 function Book(title, author) {
     // Implement the constructor here
-    return { title, author, isAvailable: true };
+    this.title = title;
+    this.author = author;
+    this.isAvailable = true;
 }
 // Array to store books
 const library = [];
 // Function to add a new book to the library
 function addBook(title, author) {
     // Implement the function here
-    library.push(Book(title, author));
+    library.push(new Book(title, author));
 }
+
 // Function to borrow a book
 function borrowBook(title) {
     // Implement the function here
-    for (var i = 0; i < library.length; i++) {
-        if (library[i].title === title) {
-            library[i].isAvailable = false;
-            break;
-        }
-    }
+    const book = library.find((book) => book.title === title);
+    if (book) {
+        if (book.isAvailable) {
+            book.isAvailable = false;
+            console.log("Book borrowed\n");
+        } else console.log("Book Not Available");
+    } else console.log("Book not found");
 }
+
 // Function to return a book
 function returnBook(title) {
     // Implement the function here
-    for (var i = 0; i < library.length; i++) {
-        if (library[i].title === title) {
-            library[i].isAvailable = true;
-            break;
-        }
-    }
+    const book = library.find((book) => book.title === title);
+    if (book) {
+        book.isAvailable = true;
+    } else console.log("Book Not Found");
 }
 // Function to list all books
 function listBooks() {
